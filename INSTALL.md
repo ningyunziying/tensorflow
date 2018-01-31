@@ -432,20 +432,14 @@ You can skip this section unless you are seeing problems relatedto the protobuf 
 
 The TensorFlow pip package depends on protobuf pip package version 3.1. Theprotobuf pip package downloaded from PyPI (when invoking`pip install protobuf`) is a Python-only library containingPython implementations of proto serialization/deserialization that can run**10x-50x slower** than the C++ implementation. Protobuf also supports abinary extension for the Python package that contains fastC++ based proto parsing.  This extension is not available in thestandard Python-only pip package.  We have created a custom binarypip package for protobuf that contains the binary extension. To installthe custom binary protobuf pip package, invoke one of the following commands:
 
-- for Python 2.7:
-
-  ​
+- for Python 2.7:​
 
   ```
   $ pip install --upgrade \
   https://storage.googleapis.com/tensorflow/mac/cpu/protobuf-3.1.0-cp27-none-macosx_10_11_x86_64.whl
   ```
 
-  ​
-
 - for Python 3.n:
-
-  ​
 
   ```
   $ pip3 install --upgrade \
